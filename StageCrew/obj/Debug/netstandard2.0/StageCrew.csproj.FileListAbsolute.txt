@@ -1,0 +1,13 @@
+C:\StageCrew\StageCrew\bin\Debug\netstandard2.0\StageCrew.deps.json
+C:\StageCrew\StageCrew\bin\Debug\netstandard2.0\StageCrew.dll
+C:\StageCrew\StageCrew\bin\Debug\netstandard2.0\StageCrew.pdb
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.csproj.CoreCompileInputs.cache
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.AssemblyInfoInputs.cache
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.AssemblyInfo.cs
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\XamlC.stamp
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.dll
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.pdb
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.csprojAssemblyReference.cache
