@@ -7,6 +7,22 @@
              x:Class="StageCrew.Views.HomeScreen">
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="Account Info:" FontSize="Large" Margin="5"/>
+            
+            <StackLayout x:Name="AccountStuff" Margin="15">
+                <Label Text="Your Name: "/>
+                <Label Text="Location: " />
+            </StackLayout>
+
+            <Label Text="Sets:" FontSize="Large" Margin="5"/>
+            
+            <StackLayout x:Name="SetsStuff" Margin="15">
+                <Button Text="Gig 1"/>
+                <Button Text="Gig 2"/>
+
+            </StackLayout>
+
+            <Button x:Name="CreateNewSetButton" Margin="25" BackgroundColor="BlueViolet" Text="Create New Set +" TextColor="White" WidthRequest="50" HorizontalOptions="End" FontSize="8" Clicked="CreateSetButtonClicked"/>
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

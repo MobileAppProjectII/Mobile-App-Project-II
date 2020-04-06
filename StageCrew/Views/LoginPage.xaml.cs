@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,15 +26,26 @@ namespace StageCrew.Views
             Lbl_Username.TextColor = Constants.MainTextColor;
             Lbl_Password.TextColor = Constants.MainTextColor;
             LoginStuff.Margin = 20;
-            
+
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += (s, e) => {
+                // handle the tap
+                DisplayAlert("Item Clicked", "Congratulations on touching the label", "Okay");
+
+                //you can call gotopage and then just put a number to signify the page you want to go to. 1 is homescreen
+
+            };
+            Create_Text.GestureRecognizers.Add(tapGestureRecognizer);
+           
+
         }
         private void SignInProcedure(object sender, EventArgs e)
         {
             User user = new User(Entry_Username.Text, Entry_Password.Text);
-            if (user.CheckInformation())
+            if (!user.CheckInformation())
             {
                 DisplayAlert("Login", "Login Success", "Okay");
-                int num = 1; //1 is the mainpage
+                int num = 1; //1 is the homescreen
                 gotoPage(num);
                 
 
@@ -46,7 +57,6 @@ namespace StageCrew.Views
 
 
         }
-
         private async void gotoPage(int num)
         {
             if (num == 1)
@@ -54,5 +64,6 @@ namespace StageCrew.Views
                 await Navigation.PushAsync(new HomeScreen());
             }
         }
+
     }
 }

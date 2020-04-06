@@ -18,10 +18,27 @@
                 <Label x:Name="Lbl_Password" Text="Password"/>
                 <Entry x:Name="Entry_Password" Placeholder="Password"/>
                 <Button x:Name="Btn_Signin" Text="Sign in" Clicked="SignInProcedure"/>
+
+                <Label x:Name="Create_Account" FontSize="Small" HorizontalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Don't have an account? "/>
+                            <Span Text="Create one" TextColor="DarkBlue" TextDecorations="Underline" x:Name="Create_Text">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ClickCommand}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                   
+                </Label>
+                       
             </StackLayout>
 
 
 
         </StackLayout>
+        
+        
     </ContentPage.Content>
 </ContentPage>
