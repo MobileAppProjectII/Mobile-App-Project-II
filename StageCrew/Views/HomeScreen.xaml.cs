@@ -16,5 +16,35 @@ namespace StageCrew.Views
         {
             InitializeComponent();
         }
+
+        private void CreateSetButtonClicked(object sender, EventArgs e)
+        {
+           // gotoPage(2);
+            MakeNewButton();
+        }
+
+        private async void gotoPage(int num)
+        {
+            if (num == 1)
+            {
+                await Navigation.PushAsync(new HomeScreen());
+            }
+            else if (num == 2)
+            {
+                await Navigation.PushAsync(new LoginPage());
+            }
+        }
+
+        private void MakeNewButton()
+        {
+            Button button = new Button
+            {
+                Text = "New Set"
+            };
+
+            SetsStuff.Children.Add(button);
+        }
     }
+
+   
 }
