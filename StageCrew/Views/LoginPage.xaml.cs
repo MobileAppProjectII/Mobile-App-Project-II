@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using StageCrew.Data;
 
 namespace StageCrew.Views
 {
@@ -42,11 +43,12 @@ namespace StageCrew.Views
         private void SignInProcedure(object sender, EventArgs e)
         {
             User user = new User(Entry_Username.Text, Entry_Password.Text);
-            if (!user.CheckInformation())
+            if (user.CheckInformation())
             {
                 DisplayAlert("Login", "Login Success", "Okay");
                 int num = 1; //1 is the homescreen
-                gotoPage(num);
+                App.UserDatabase.SaveUser(user);
+                // gotoPage(num);
                 
 
             }
@@ -62,6 +64,10 @@ namespace StageCrew.Views
             if (num == 1)
             {
                 await Navigation.PushAsync(new HomeScreen());
+            }
+            else if (num ==2)
+            {
+                //await Navigation.PushAsync(new CreateAccountPage);
             }
         }
 

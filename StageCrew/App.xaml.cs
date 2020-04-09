@@ -1,12 +1,14 @@
-﻿using StageCrew.Views;
+﻿using StageCrew.Data;
+using StageCrew.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 namespace StageCrew
 {
     public partial class App : Application
     {
+
+        static UserDatabaseController userDatabase;
         public App()
         {
             InitializeComponent();
@@ -27,6 +29,18 @@ namespace StageCrew
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        public static UserDatabaseController UserDatabase
+        {
+            get
+            {
+                if (userDatabase == null )
+                {
+                    userDatabase = new UserDatabaseController();
+                }
+                return userDatabase;
+            }
         }
     }
 }
