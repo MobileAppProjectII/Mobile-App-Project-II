@@ -6,8 +6,13 @@ C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.csproj.CoreCompileInputs.cache
 C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.AssemblyInfoInputs.cache
 C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.AssemblyInfo.cs
-C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\XamlC.stamp
 C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.dll
 C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.pdb
 C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\StageCrew.csprojAssemblyReference.cache
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\HomeScreen.xaml.g.cs
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\CreateAccountPage.xaml.g.cs
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\XamlC.stamp
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\Set.xaml.g.cs
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\Song.xaml.g.cs
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\Stanza.xaml.g.cs
