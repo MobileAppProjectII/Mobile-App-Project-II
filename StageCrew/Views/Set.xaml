@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StageCrew.Views.Set">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Set"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Add Song" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Set_Add_Song_Button_Clicked" />
+            <Button Text="Save Set" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Save_Set_Button_Clicked" />
+            <Label x:Name="Lbl_Username" Text="Share With..."/>
+            <Entry x:Name="Entry_Username" Placeholder="Type username..."/>
+            <Button x:Name="Btn_Share" Text="Share" Clicked="ShareProcedure"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
