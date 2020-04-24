@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StageCrew.Views.SelectAvatar">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Label Text="Select an Avatar: " FontSize="Large" FontAttributes="Bold" />
+                <Image x:Name="profileImg1" Source="download.jpg" HeightRequest="200">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ClickCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="profileImg2" Source="avatar2.png" HeightRequest="200">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ClickCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="profileImg3" Source="avatar3.png" HeightRequest="200">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ClickCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="profileImg4" Source="avatar4.png" HeightRequest="200">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ClickCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="profileImg5" Source="avatar5.png" HeightRequest="200">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ClickCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="profileImg6" Source="avatar6.jpg" HeightRequest="200">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ClickCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="profileImg7" Source="avatar7.jpg" HeightRequest="200">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ClickCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

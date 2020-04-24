@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StageCrew.Views.Stanza">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Stanza Page"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="Name" Text="Name:" VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
+            <Editor Placeholder="Ex: Chorus 1..." VerticalOptions="CenterAndExpand" HorizontalOptions="End" 
+                    AutoSize="TextChanges" />
+            <Label x:Name="Lyrics" Text="Lyrics:" VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
+            <Editor Placeholder="Add Lyrics Here..." VerticalOptions="CenterAndExpand" HorizontalOptions="End" 
+                    AutoSize="TextChanges" />
+            <Button Text="Add Lyrics" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Lyrics_Button_Clicked" />
+            <Button Text="Add Chords" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Chord_Button_Clicked" />
+            <Button Text="Add Recording" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Recording_Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

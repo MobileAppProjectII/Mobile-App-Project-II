@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StageCrew.Views.CreateAccountPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Create an Account" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="10"/>
+
+            <StackLayout x:Name="AccountInfoStuff" Margin="10">
+                <Label Text="Username: " FontAttributes="Bold"/>
+                <Entry x:Name="username" Placeholder="enter username" />
+                <Label Text="Password: " FontAttributes="Bold" />
+                <Entry x:Name="password" Placeholder="enter password" />
+
+
+            </StackLayout>
+
+            <Button Text="Submit Account Info" BackgroundColor="DarkBlue" Margin="20" TextColor="White" Clicked="SubmitButtonClicked"/>
+        </StackLayout>
+
+       
+    </ContentPage.Content>
+</ContentPage>
