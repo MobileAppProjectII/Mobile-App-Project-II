@@ -12,6 +12,8 @@ namespace StageCrew.Models
         public string Username { get; set; }
         public string Password { get; set; }
 
+        public string Location { get; set; }
+        public string AboutMe { get; set; }
         public User() { }
         public User (string Username, string Password)
         {
@@ -19,6 +21,13 @@ namespace StageCrew.Models
             this.Password = Password;
         }
 
+        public User (string Username, string Password, string Location, string AboutMe)
+        {
+            this.Username = Username;
+            this.Password = Password;
+            this.Location = Location;
+            this.AboutMe = AboutMe;
+        }
         public bool CheckInformation()
         {
             if (this.Username == null || this.Password == null)
