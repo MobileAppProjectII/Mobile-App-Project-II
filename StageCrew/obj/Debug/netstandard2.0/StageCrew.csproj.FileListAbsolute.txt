@@ -16,3 +16,4 @@ C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\XamlC.stamp
 C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\Set.xaml.g.cs
 C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\Song.xaml.g.cs
 C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\Stanza.xaml.g.cs
+C:\StageCrew\StageCrew\obj\Debug\netstandard2.0\Views\EditProfile.xaml.g.cs
