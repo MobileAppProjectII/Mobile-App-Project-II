@@ -14,6 +14,8 @@ namespace StageCrew.Models
 
         public string Location { get; set; }
         public string AboutMe { get; set; }
+
+        public string Image { get; set; } 
         public User() { }
         public User (string Username, string Password)
         {
@@ -27,6 +29,7 @@ namespace StageCrew.Models
             this.Password = Password;
             this.Location = Location;
             this.AboutMe = AboutMe;
+            Image = "File: download.jpg";
         }
         public bool CheckInformation()
         {
