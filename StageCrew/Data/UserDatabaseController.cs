@@ -1,4 +1,7 @@
-﻿using SQLite;
+﻿using StageCrew.Data;
+//using SQLite;
+using System.Data.SqlClient;
+using SQLite;
 using StageCrew.Models;
 using System;
 using System.Collections.Generic;

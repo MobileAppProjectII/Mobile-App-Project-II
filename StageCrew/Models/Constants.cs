@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
-
 namespace StageCrew.Models
 {
     class Constants
@@ -11,6 +10,5 @@ namespace StageCrew.Models
 
         public static Color BackgroundColor = Color.FromRgb(50, 155, 215);
         public static Color MainTextColor = Color.White;
-
     }
 }
