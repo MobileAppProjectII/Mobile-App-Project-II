@@ -1,7 +1,4 @@
-﻿using StageCrew.Data;
-//using SQLite;
-using System.Data.SqlClient;
-using SQLite;
+﻿using SQLite;
 using StageCrew.Models;
 using System;
 using System.Collections.Generic;
@@ -20,6 +17,7 @@ namespace StageCrew.Data
         {
             database = DependencyService.Get<ISQLite>().GetConnection();
             database.CreateTable<User>();
+            database.CreateTable<SetInfo>();
         }
 
         public User GetUser()
@@ -59,6 +57,51 @@ namespace StageCrew.Data
             lock (locker)
             {
                 return database.Delete<User>(id);
+            }
+        }
+
+
+
+
+        //set stuff *************
+
+        public SetInfo GetSet()
+        {
+            lock (locker)
+            {
+                if (database.Table<SetInfo>().Count() == 0)
+                {
+                    return null;
+                }
+
+                else
+                {
+                    return database.Table<SetInfo>().First();
+                }
+            }
+        }
+
+        public int SaveSet(SetInfo set)
+        {
+            lock (locker)
+            {
+                if (set.id != 0)
+                {
+                    database.Update(set);
+                    return set.id;
+                }
+                else
+                {
+                    return database.Insert(set);
+                }
+            }
+        }
+
+        public int DeleteSet(int id)
+        {
+            lock (locker)
+            {
+                return database.Delete<SetInfo>(id);
             }
         }
     }
