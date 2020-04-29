@@ -42,7 +42,6 @@ namespace StageCrew.Views
             tapGestureRecognizer.Tapped += (s, e) =>
             {
                 // handle the tap
-                DisplayAlert("Item Clicked", "Congratulations on touching the label", "Okay");
 
                 Navigation.PushAsync(new EditProfile(this.verified_username, this.verified_password, element));
                 //you can call gotopage and then just put a number to signify the page you want to go to. 1 is homescreen

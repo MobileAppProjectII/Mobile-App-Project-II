@@ -36,7 +36,6 @@ namespace StageCrew.Views
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += (s, e) => {
                 // handle the tap
-                DisplayAlert("Item Clicked", "Congratulations on touching the label", "Okay");
 
                 gotoPage(2);
                 //you can call gotopage and then just put a number to signify the page you want to go to. 1 is homescreen
@@ -66,7 +65,6 @@ namespace StageCrew.Views
                     { 
                         if (s.Username == Entry_Username.Text && s.Password == Entry_Password.Text)
                         {
-                            await DisplayAlert("success", "Found user in database!", "Okay");
                             verified_username = s.Username;
                             verified_password = s.Password;
                             break; //stop at the first find

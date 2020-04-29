@@ -7,14 +7,25 @@
              x:Class="StageCrew.Views.Set">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Set"
-                VerticalOptions="CenterAndExpand" 
+            <Entry x:Name="SetNameLabel" Text="Set" FontSize="Large" FontAttributes="Bold" Margin="10"
                 HorizontalOptions="CenterAndExpand" />
-            <Button Text="Add Song" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Set_Add_Song_Button_Clicked" />
-            <Button Text="Save Set" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Save_Set_Button_Clicked" />
-            <Label x:Name="Lbl_Username" Text="Share With..."/>
-            <Entry x:Name="Entry_Username" Placeholder="Type username..."/>
-            <Button x:Name="Btn_Share" Text="Share" Clicked="ShareProcedure"/>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <StackLayout Margin="10">
+                    <Label  Text="Description:" HorizontalOptions="StartAndExpand"/>
+                    <Editor x:Name="setDescriptionEditor" Placeholder="write about your set..." />
+                </StackLayout>
+                <StackLayout Margin="10">
+                    <Button Text="Save Set" HorizontalOptions="Center"  Clicked="Save_Set_Button_Clicked" />
+                    <Button Text="Add Song" HorizontalOptions="Center"  Clicked="Set_Add_Song_Button_Clicked" />
+                    <StackLayout x:Name="SongStack">
+                        <Label Text="Song list:" FontSize="Large" FontAttributes="Bold"/>
+
+                    </StackLayout>
+              <Label x:Name="Lbl_Username" Text="Share With..."/>
+              <Entry x:Name="Entry_Username" Placeholder="Type username..."/>
+              <Button x:Name="Btn_Share" Text="Share" Clicked="ShareProcedure"/>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
