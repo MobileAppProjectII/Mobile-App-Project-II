@@ -7,13 +7,16 @@
              x:Class="StageCrew.Views.Song">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Song Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="Start" />
-            <Label x:Name="Notes" Text="Song:" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
-            <Editor Placeholder="Type Song Name Here..." VerticalOptions="CenterAndExpand" HorizontalOptions="Start" 
-                    AutoSize="TextChanges" />
-            <Button Text="Add Stanza" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Stanza_Button_Clicked" />
+            <Entry x:Name="SongNameEntry" Text="Song Page" FontSize="Large" FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="SaveSongButton" Text="Save Song" HorizontalOptions="Center" VerticalOptions="Center" Clicked="SaveSongButton_Clicked"/>
+            <Button Text="Add Stanza" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Stanza_Button_Clicked" Margin="5"/>
+            <Label Text="Song Info:" FontAttributes="Bold"/>
+            <StackLayout x:Name="StanzaStack"></StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+              <Label x:Name="Notes" Text="Song:" HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold"/>
+              <Editor x:Name="NotesEditor" Placeholder="type notes here..." FontSize="Large" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

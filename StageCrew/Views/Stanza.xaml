@@ -6,19 +6,55 @@
              mc:Ignorable="d"
              x:Class="StageCrew.Views.Stanza">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Stanza Page"
-                VerticalOptions="CenterAndExpand" 
+        <ScrollView>
+            <StackLayout>
+                <Entry x:Name="StanzaNameEntry" Placeholder="Name" FontSize="Large" FontAttributes="Bold"
+             
                 HorizontalOptions="CenterAndExpand" />
-            <Label x:Name="Name" Text="Name:" VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
-            <Editor Placeholder="Ex: Chorus 1..." VerticalOptions="CenterAndExpand" HorizontalOptions="End" 
-                    AutoSize="TextChanges" />
-            <Label x:Name="Lyrics" Text="Lyrics:" VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
-            <Editor Placeholder="Add Lyrics Here..." VerticalOptions="CenterAndExpand" HorizontalOptions="End" 
-                    AutoSize="TextChanges" />
-            <Button Text="Add Lyrics" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Lyrics_Button_Clicked" />
-            <Button Text="Add Chords" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Chord_Button_Clicked" />
-            <Button Text="Add Recording" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Recording_Button_Clicked" />
-        </StackLayout>
+
+                <Button x:Name="SaveStanzaButton" Text="Save" HorizontalOptions="Center" Clicked="SaveStanzaButton_Clicked"/>
+
+                <AbsoluteLayout>
+                    <Entry x:Name="chord1a_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="50,20, 60, 40"/>
+                    <Entry x:Name="chord1b_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="150,20, 60, 40"/>
+                    <Entry x:Name="chord1c_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="250,20, 60, 40"/>
+
+                </AbsoluteLayout>
+
+                <Editor x:Name="line1_entry" Placeholder="Line 1..." 
+                    AutoSize="TextChanges"  Margin="5"/>
+
+                <AbsoluteLayout>
+                    <Entry x:Name="chord2a_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="50,20, 60, 40"/>
+                    <Entry x:Name="chord2b_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="150,20, 60, 40"/>
+                    <Entry x:Name="chord2c_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="250,20, 60, 40"/>
+
+                </AbsoluteLayout>
+                <Editor x:Name="line2_entry" Placeholder="Line 2..." 
+                    AutoSize="TextChanges"  Margin="5" />
+                <AbsoluteLayout>
+                    <Entry x:Name="chord3a_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="50,20, 60, 40"/>
+                    <Entry x:Name="chord3b_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="150,20, 60, 40"/>
+                    <Entry x:Name="chord3c_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="250,20, 60, 40"/>
+
+                </AbsoluteLayout>
+                <Editor x:Name="line3_entry" Placeholder="Line 3..." 
+                    AutoSize="TextChanges"  Margin="5"/>
+                <AbsoluteLayout>
+                    <Entry x:Name="chord4a_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="50,20, 60, 40"/>
+                    <Entry x:Name="chord4b_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="150,20, 60, 40"/>
+                    <Entry x:Name="chord4c_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="250,20, 60, 40"/>
+
+                </AbsoluteLayout>
+                <Editor x:Name="line4_entry" Placeholder="Line 4..." 
+                    AutoSize="TextChanges" Margin="5" />
+               
+                <Button Text="Add Recording" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Recording_Button_Clicked" />
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <Label x:Name="Notes" Text="Song:" HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold"/>
+                    <Editor x:Name="NotesEditor" Placeholder="type notes here..." FontSize="Large" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

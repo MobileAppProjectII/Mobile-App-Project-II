@@ -7,21 +7,22 @@
              xmlns:local="clr-namespace:EmbeddedImages"
              x:Class="StageCrew.Views.HomeScreen">
     <ContentPage.Content>
+       <ScrollView>
         <StackLayout>
 
                 <Label x:Name="AccountNameLabel" Text="Account Name:" FontSize="Large" FontAttributes="Bold" Margin="5" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
-            <Image Source="download.jpg" HeightRequest="200"/>
+            <Image x:Name="profileImg" Source="download.jpg" HeightRequest="200"/>
             <Button Text="Edit Profile" HorizontalOptions="CenterAndExpand" Clicked="EditProfileButtonClicked"/>
             <StackLayout x:Name="AccountStuff" Margin="15">
-                <Label Text="Location: " FontAttributes="Bold" Margin="5"/>
-                <Label x:Name="location_info"/>
+                <Label Text="Location:" FontAttributes="Bold" TextDecorations="Underline" FontSize="Medium" Margin="5"/>
+                <Label x:Name="location_info"  FontSize="Medium" Margin="5"/>
                 
-                <Label Text="About Me: " FontAttributes="Bold" Margin="5"/>
-                <Label x:Name="aboutMe_info"/>
+                <Label Text="About Me:" FontAttributes="Bold" TextDecorations="Underline" FontSize="Medium" Margin="5"/>
+                <Label x:Name="aboutMe_info" FontSize="Medium" Margin="5"/>
 
             </StackLayout>
 
-            <Label Text="My Sets:" FontSize="Large" Margin="5"/>
+            <Label Text="My Sets:" FontSize="Large" FontAttributes="Bold" TextDecorations="Underline" Margin="5"/>
             
             <StackLayout x:Name="SetsStuff" Margin="15">
                 <Button Text="Gig 1" Clicked="ExampleGigClicked"/>
@@ -30,9 +31,8 @@
             </StackLayout>
 
             <Button x:Name="CreateNewSetButton" Margin="25" BackgroundColor="BlueViolet" Text="Create New Set +" TextColor="White" WidthRequest="50" HorizontalOptions="End" FontSize="8" Clicked="CreateSetButtonClicked"/>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
         </StackLayout>
+       </ScrollView>
     </ContentPage.Content>
 </ContentPage>

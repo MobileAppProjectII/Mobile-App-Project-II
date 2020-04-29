@@ -52,9 +52,9 @@ namespace StageCrew.Views
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += (s, e) => {
                 // handle the tap
-                DisplayAlert("Item Clicked", "Congratulations on touching the label", "Okay");
 
-                Navigation.PopAsync();
+                Navigation.PopAsync();//get rid of editprofile
+                Navigation.PopAsync();//get rid of old homescreen bc picture will be different
                 Navigation.PushAsync(new SelectAvatar(this.verified_username, this.verified_password));
                
                 //you can call gotopage and then just put a number to signify the page you want to go to. 1 is homescreen
@@ -76,7 +76,7 @@ namespace StageCrew.Views
                         //get rest of data for prof page
                         aboutMe_info.Text = s.AboutMe;
                         location_info.Text = s.Location;
-                        break;
+
                     }
                 }
                 //read info here and fill fields
@@ -87,7 +87,7 @@ namespace StageCrew.Views
             using (SQLiteConnection conn = new SQLiteConnection(_dbPath))
             {
                 User user = new User(this.verified_username, this.verified_password, location_info.Text, aboutMe_info.Text);
-
+                user.Image = profileImg.Source.ToString();
                 conn.CreateTable<User>(); //creates table to read from it?
                 var data = conn.Table<User>().ToList(); //everything is in contacts at this point
                 foreach(User s in data)
