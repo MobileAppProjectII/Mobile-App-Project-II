@@ -7,18 +7,40 @@
              x:Class="StageCrew.Views.CreateAccountPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Create an Account" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="10"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <BoxView Color="DeepSkyBlue" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Create an Account" FontSize="36" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" TextColor="White"/>
+            </Grid>
+            
 
             <StackLayout x:Name="AccountInfoStuff" Margin="10">
-                <Label Text="Username: " FontAttributes="Bold"/>
-                <Entry x:Name="username" Placeholder="enter username" />
-                <Label Text="Password: " FontAttributes="Bold" />
-                <Entry x:Name="password" Placeholder="enter password" />
+                <Label Text="Username: " FontAttributes="Bold" FontSize="26" TextDecorations="Underline"/>
+                <Entry x:Name="username" Placeholder="enter username" FontSize="Medium" />
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" Grid.Row="0" Grid.Column="0"/>
+                </Grid>
+                
+                <Label Text="Password: " FontAttributes="Bold" FontSize="26" TextDecorations="Underline"/>
+                <Entry x:Name="password" Placeholder="enter password" FontSize="Medium" IsPassword="True"/>
 
 
             </StackLayout>
 
-            <Button Text="Submit Account Info" BackgroundColor="DarkBlue" Margin="20" TextColor="White" Clicked="SubmitButtonClicked"/>
+            <Button Text="Submit Account Info" BackgroundColor="BlueViolet" Margin="20" TextColor="White" Clicked="SubmitButtonClicked"/>
         </StackLayout>
 
        

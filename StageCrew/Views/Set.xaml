@@ -4,28 +4,62 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="StageCrew.Views.Set">
+             x:Class="StageCrew.Views.Set"
+             Title="My Set">
     <ContentPage.Content>
-        <StackLayout>
-            <Entry x:Name="SetNameLabel" Text="Set" FontSize="Large" FontAttributes="Bold" Margin="10"
-                HorizontalOptions="CenterAndExpand" />
-            <StackLayout VerticalOptions="EndAndExpand">
-                <StackLayout Margin="10">
-                    <Label  Text="Description:" HorizontalOptions="StartAndExpand"/>
-                    <Editor x:Name="setDescriptionEditor" Placeholder="write about your set..." />
-                </StackLayout>
-                <StackLayout Margin="10">
-                    <Button Text="Save Set" HorizontalOptions="Center"  Clicked="Save_Set_Button_Clicked" />
-                    <Button Text="Add Song" HorizontalOptions="Center"  Clicked="Set_Add_Song_Button_Clicked" />
-                    <StackLayout x:Name="SongStack">
-                        <Label Text="Song list:" FontSize="Large" FontAttributes="Bold"/>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="130" />
+                        <RowDefinition Height= "70" />
+                        <RowDefinition Height= "200" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView Color="DeepSkyBlue" Grid.Row="0" Grid.Column="0"/>
+                    <Entry x:Name="SetNameLabel" Grid.Row="0" Grid.Column="0" Text="Set" FontSize="36" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" />
 
+                    <StackLayout VerticalOptions="EndAndExpand" Grid.Row="1" Grid.Column="0">
+                        <StackLayout Margin="10" >
+                            <Label  Text="Description:" FontSize="26" FontAttributes="Bold" TextDecorations="Underline"/>
+                            <Editor x:Name="setDescriptionEditor" Placeholder="write about your set..." FontSize="Medium"/>
+                        </StackLayout>
                     </StackLayout>
-              <Label x:Name="Lbl_Username" Text="Share With..."/>
-              <Entry x:Name="Entry_Username" Placeholder="Type username..."/>
-              <Button x:Name="Btn_Share" Text="Share" Clicked="ShareProcedure"/>
+                    
+                    <BoxView Color="DeepSkyBlue" Grid.Row="2" Grid.Column="0"/>
+                    <Label Text="Song list" Grid.Row="2" Grid.Column="0" TextColor="White" FontSize="36" Margin="10" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    
+                    
+                    <ScrollView BackgroundColor="Azure" Grid.Row="3" Grid.Column="0" Margin="5">
+                        <StackLayout x:Name="SongStack" Margin="15">
+
+
+                        </StackLayout>
+                    </ScrollView>
+                </Grid>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Button Text="Save Set" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Margin="25" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" FontSize="Small" Clicked="Save_Set_Button_Clicked" />
+                    <Button Text="Add Song" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Margin="25" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" FontSize="Small" Clicked="Set_Add_Song_Button_Clicked" />
+                    
+                </Grid>
+
+                <StackLayout Margin="10">
+                    <Label x:Name="Lbl_Username" Text="Share With..." TextDecorations="Underline" FontSize="26" FontAttributes="Bold"/>
+                    <Entry x:Name="Entry_Username" Placeholder="Type username..." FontSize="Medium"/>
+                    <Button x:Name="Btn_Share" Text="Share" Margin="25" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" HorizontalOptions="Center" FontSize="Small" Clicked="ShareProcedure"/>
                 </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

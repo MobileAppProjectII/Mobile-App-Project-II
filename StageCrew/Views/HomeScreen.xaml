@@ -5,19 +5,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:local="clr-namespace:EmbeddedImages"
-             x:Class="StageCrew.Views.HomeScreen">
+             x:Class="StageCrew.Views.HomeScreen"
+             Title="Home">
     <ContentPage.Content>
        <ScrollView>
         <StackLayout>
 
-                <Label x:Name="AccountNameLabel" Text="Account Name:" FontSize="Large" FontAttributes="Bold" Margin="5" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView Color="DeepSkyBlue" Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="AccountNameLabel" Text="Account Name:" FontSize="36" TextColor="White" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                </Grid>
+            
+            
+            
+            
             <Image x:Name="profileImg" Source="download.jpg" HeightRequest="200"/>
-            <Button Text="Edit Profile" HorizontalOptions="CenterAndExpand" Clicked="EditProfileButtonClicked" WidthRequest="200"/>
+            
+            
+            
+            <Button Text="Edit Profile" Clicked="EditProfileButtonClicked" WidthRequest="150" Margin="25" BackgroundColor="BlueViolet" TextColor="White" HorizontalOptions="Center" FontSize="Small"/>
             <StackLayout x:Name="AccountStuff" Margin="15">
-                <Label Text="Location:" FontAttributes="Bold" TextDecorations="Underline" FontSize="Large" Margin="5"/>
+                <Label Text="Location:" FontAttributes="Bold" TextDecorations="Underline" FontSize="26" Margin="5"/>
                 <Label x:Name="location_info"  FontSize="Medium" Margin="5"/>
 
-                <Label Text="About Me:" FontAttributes="Bold" TextDecorations="Underline" FontSize="Large" Margin="5"/>
+                <Label Text="About Me:" FontAttributes="Bold" TextDecorations="Underline" FontSize="26" Margin="5"/>
                 <Label x:Name="aboutMe_info" FontSize="Medium" Margin="5"/>
 
                 </StackLayout>
@@ -25,16 +42,14 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50" />
-                        <RowDefinition Height="20" />
-                        <RowDefinition Height="50"  />
-                        <RowDefinition Height= "20" />
+                        <RowDefinition Height="70"  />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Label Text="" Grid.Row="1" Grid.Column="0" BackgroundColor="Indigo"/>
-                    <Label Text="My Sets" Grid.Row="2" Grid.Column="0" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" TextDecorations="Underline" Margin="5"/>
-                    <Label Text="" Grid.Row="3" Grid.Column="0" BackgroundColor="Indigo"/>
+                    <BoxView Color="DeepSkyBlue" Grid.Row="1" Grid.Column="0" />
+                    <Label Text="My Sets" Grid.Row="1" Grid.Column="0" FontSize="36" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" Margin="10"/>
+                    
                     
                 </Grid>
 
@@ -48,8 +63,7 @@
                     </Grid.ColumnDefinitions>
                     <ScrollView BackgroundColor="Azure" Grid.Row="0" Grid.Column="0" Margin="5">
                             <StackLayout x:Name="SetsStuff" Margin="15">
-                        <!--<Button Text="Gig 1" Clicked="ExampleGigClicked"/>
-                <Button Text="Gig 2"/>-->
+                       
 
                             </StackLayout>
                         </ScrollView>

@@ -4,15 +4,26 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="StageCrew.Views.Stanza">
+             x:Class="StageCrew.Views.Stanza"
+             Title="Stanza">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Entry x:Name="StanzaNameEntry" Placeholder="Name" FontSize="Large" FontAttributes="Bold"
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView Color="DeepSkyBlue" Grid.Row="0" Grid.Column="0"/>
+                    <Entry x:Name="StanzaNameEntry" Placeholder="Name" Grid.Row="0" Grid.Column="0" FontSize="36" FontAttributes="Bold"
              
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                </Grid>
+                
 
-                <Button x:Name="SaveStanzaButton" Text="Save" HorizontalOptions="Center" Clicked="SaveStanzaButton_Clicked"/>
+                <Button x:Name="SaveStanzaButton" Text="Save" HorizontalOptions="Center" Margin="25" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" FontSize="Small" Clicked="SaveStanzaButton_Clicked"/>
 
                 <AbsoluteLayout>
                     <Entry x:Name="chord1a_entry" Placeholder="Chord" AbsoluteLayout.LayoutBounds="50,20, 60, 40"/>
@@ -49,10 +60,10 @@
                 <Editor x:Name="line4_entry" Placeholder="Line 4..." 
                     AutoSize="TextChanges" Margin="5" />
                
-                <Button Text="Add Recording" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Recording_Button_Clicked" />
+                <Button Text="Add Recording" HorizontalOptions="Center" VerticalOptions="Center" Margin="25" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" FontSize="Small" Clicked="Add_Recording_Button_Clicked" />
                 <StackLayout VerticalOptions="EndAndExpand">
-                    <Label x:Name="Notes" Text="Song:" HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold"/>
-                    <Editor x:Name="NotesEditor" Placeholder="type notes here..." FontSize="Large" />
+                    <Label x:Name="Notes" Text="Notes:" HorizontalOptions="Start" FontSize="26" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <Editor x:Name="NotesEditor" Placeholder="type notes here..." FontSize="Medium" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>

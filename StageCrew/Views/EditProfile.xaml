@@ -4,10 +4,22 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="StageCrew.Views.EditProfile">
+             x:Class="StageCrew.Views.EditProfile"
+             Title="Edit Profile">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="AccountNameLabel" Text="Account Name:" FontSize="Large" FontAttributes="Bold" Margin="5" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+            <Grid>
+            <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <BoxView Color="DeepSkyBlue" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="AccountNameLabel" Text="Account Name:" FontSize="36" TextColor="White" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+            </Grid>
+
+
             <Image x:Name="profileImg" Source="download.jpg" HeightRequest="200">
 
                 <Image.GestureRecognizers>
@@ -17,15 +29,15 @@
 
             <StackLayout x:Name="AccountStuff" Margin="15">
                 <StackLayout>
-                    <Label Text="Location: " FontAttributes="Bold" Margin="5"/>
-                    <Editor x:Name="location_info" Placeholder="Where are you playing?"/>
+                    <Label Text="Location: " FontAttributes="Bold" Margin="5" TextDecorations="Underline" FontSize="26"/>
+                    <Editor x:Name="location_info" Placeholder="Where are you playing?" FontSize="Medium"/>
                 </StackLayout>
                 <StackLayout>
-                    <Label Text="About Me: " FontAttributes="Bold" Margin="5"/>
-                    <Editor x:Name="aboutMe_info" Placeholder="Edit info..." HeightRequest="100"/>
+                    <Label Text="About Me: " FontAttributes="Bold" Margin="5" TextDecorations="Underline" FontSize="26"/>
+                    <Editor x:Name="aboutMe_info" Placeholder="Edit info..." FontSize="Medium" HeightRequest="100"/>
                 </StackLayout>
 
-                <Button Text="Submit" Margin="10" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Clicked="SubmitAccountInfoClicked"/>
+                <Button Text="Submit" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="25" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" FontSize="Small" Clicked="SubmitAccountInfoClicked"/>
 
             </StackLayout>
         </StackLayout>

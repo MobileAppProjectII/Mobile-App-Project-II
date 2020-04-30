@@ -13,11 +13,22 @@
             <Label x:Name="Title" Text="StageCrew" FontSize="64" Margin="10" HorizontalOptions="CenterAndExpand"/>
             <StackLayout x:Name="LoginStuff" VerticalOptions="StartAndExpand">
               
-                <Label x:Name="Lbl_Username" Text="Username"/>
-                <Entry x:Name="Entry_Username" Placeholder="Username" />
-                <Label x:Name="Lbl_Password" Text="Password"/>
-                <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True"/>
-                <Button x:Name="Btn_Signin" Text="Sign in" Clicked="SignInProcedure"/>
+                <Label x:Name="Lbl_Username" Text="Username:" FontSize="26" TextDecorations="Underline" FontAttributes="Bold"/>
+                <Entry x:Name="Entry_Username" Placeholder="Username" FontSize="Medium"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" Grid.Row="0" Grid.Column="0"/>
+                </Grid>
+
+                <Label x:Name="Lbl_Password" Text="Password:" FontSize="26" TextDecorations="Underline" FontAttributes="Bold"/>
+                <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True" FontSize="Medium"/>
+                <Button x:Name="Btn_Signin" Text="Sign in" Margin="5" Clicked="SignInProcedure"/>
 
                 <Label x:Name="Create_Account" FontSize="Small" HorizontalOptions="CenterAndExpand">
                     <Label.FormattedText>
