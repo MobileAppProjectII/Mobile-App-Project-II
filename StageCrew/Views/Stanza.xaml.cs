@@ -147,7 +147,7 @@ namespace StageCrew.Views
                 }
                 App.UserDatabase.SaveStanza(stanza);
                 Navigation.PopAsync();
-                Navigation.PushAsync(new Song(this.SongName, this.SetName, this.SetDescription, this.verified_username, this.verified_password, this.song_notes));
+                Navigation.PushAsync(new SongPage(this.SongName, this.SetName, this.SetDescription, this.verified_username, this.verified_password, this.song_notes));
 
             }
         }

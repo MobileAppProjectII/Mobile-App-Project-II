@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StageCrew.Views.SongPage">
+    <ContentPage.Content>
+        <ScrollView HeightRequest="3000">
+            <StackLayout>
+                <Entry x:Name="SongNameEntry" Text="Song Page" FontSize="Large" FontAttributes="Bold"
+                HorizontalOptions="Center" />
+                <Button x:Name="SaveSongButton" Text="Save Song" HorizontalOptions="Center" VerticalOptions="Center" Clicked="SaveSongButton_Clicked"/>
+                <Button Text="Add Stanza" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Add_Stanza_Button_Clicked" Margin="5"/>
+                <Label Text="Song Info:" FontAttributes="Bold"/>
+                    <StackLayout x:Name="StanzaStack">
+
+                    </StackLayout>
+
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <Label x:Name="Notes" Text="Song:" HorizontalOptions="Start" FontSize="Large" FontAttributes="Bold"/>
+                    <Editor x:Name="NotesEditor" Placeholder="type notes here..." FontSize="Large" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

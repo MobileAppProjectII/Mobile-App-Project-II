@@ -12,27 +12,52 @@
 
                 <Label x:Name="AccountNameLabel" Text="Account Name:" FontSize="Large" FontAttributes="Bold" Margin="5" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
             <Image x:Name="profileImg" Source="download.jpg" HeightRequest="200"/>
-            <Button Text="Edit Profile" HorizontalOptions="CenterAndExpand" Clicked="EditProfileButtonClicked"/>
+            <Button Text="Edit Profile" HorizontalOptions="CenterAndExpand" Clicked="EditProfileButtonClicked" WidthRequest="200"/>
             <StackLayout x:Name="AccountStuff" Margin="15">
-                <Label Text="Location:" FontAttributes="Bold" TextDecorations="Underline" FontSize="Medium" Margin="5"/>
+                <Label Text="Location:" FontAttributes="Bold" TextDecorations="Underline" FontSize="Large" Margin="5"/>
                 <Label x:Name="location_info"  FontSize="Medium" Margin="5"/>
-                
-                <Label Text="About Me:" FontAttributes="Bold" TextDecorations="Underline" FontSize="Medium" Margin="5"/>
+
+                <Label Text="About Me:" FontAttributes="Bold" TextDecorations="Underline" FontSize="Large" Margin="5"/>
                 <Label x:Name="aboutMe_info" FontSize="Medium" Margin="5"/>
 
+                </StackLayout>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="50"  />
+                        <RowDefinition Height= "20" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" Grid.Row="1" Grid.Column="0" BackgroundColor="Indigo"/>
+                    <Label Text="My Sets" Grid.Row="2" Grid.Column="0" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" TextDecorations="Underline" Margin="5"/>
+                    <Label Text="" Grid.Row="3" Grid.Column="0" BackgroundColor="Indigo"/>
+                    
+                </Grid>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200" />
+                        <RowDefinition Height= "100" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <ScrollView BackgroundColor="Azure" Grid.Row="0" Grid.Column="0" Margin="5">
+                            <StackLayout x:Name="SetsStuff" Margin="15">
+                        <!--<Button Text="Gig 1" Clicked="ExampleGigClicked"/>
+                <Button Text="Gig 2"/>-->
+
+                            </StackLayout>
+                        </ScrollView>
+                    <Button Grid.Row="1" Grid.Column="0" x:Name="CreateNewSetButton" Margin="25" BackgroundColor="BlueViolet" Text="Create New Set +" TextColor="White" WidthRequest="150" HorizontalOptions="Center" FontSize="Small" Clicked="CreateSetButtonClicked"/>
+
+                </Grid>
+
             </StackLayout>
-
-            <Label Text="My Sets:" FontSize="Large" FontAttributes="Bold" TextDecorations="Underline" Margin="5"/>
-            
-            <StackLayout x:Name="SetsStuff" Margin="15">
-                <Button Text="Gig 1" Clicked="ExampleGigClicked"/>
-                <Button Text="Gig 2"/>
-
-            </StackLayout>
-
-            <Button x:Name="CreateNewSetButton" Margin="25" BackgroundColor="BlueViolet" Text="Create New Set +" TextColor="White" WidthRequest="50" HorizontalOptions="End" FontSize="8" Clicked="CreateSetButtonClicked"/>
-            
-        </StackLayout>
        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

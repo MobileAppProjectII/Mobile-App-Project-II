@@ -145,10 +145,10 @@ namespace StageCrew.Views
             }
         }
 
-        private async void ExampleGigClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Set());
-        }
+        //private async void ExampleGigClicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new Set());
+        //}
 
         private void MakeNewButton(string buttonName)
         {
