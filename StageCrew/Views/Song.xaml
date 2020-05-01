@@ -10,35 +10,7 @@
 
     <!--<NavigationPage Title="Xylophone" IconImageSource="-"/>-->
     
-    <NavigationPage Title="Guitar">
-        <x:Arguments>
-            <local:SongPage />
-        </x:Arguments>
-    </NavigationPage>
-
-    <NavigationPage Title="Drums">
-        <x:Arguments>
-            <local:SongPage />
-        </x:Arguments>
-    </NavigationPage>
-
-    <NavigationPage Title="Bass" >
-        <x:Arguments>
-            <local:SongPage />
-        </x:Arguments>
-    </NavigationPage>
-
-    <NavigationPage Title="Piano">
-        <x:Arguments>
-            <local:SongPage />
-        </x:Arguments>
-    </NavigationPage>
-
-    <NavigationPage Title="Vocals">
-        <x:Arguments>
-            <local:SongPage />
-        </x:Arguments>
-    </NavigationPage>
+    
 
 </TabbedPage>
 

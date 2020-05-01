@@ -14,14 +14,33 @@ namespace StageCrew.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Song : TabbedPage
     {
-        public Song(string SongName, string SetName, string SetDescription, string username, string passwor)
+      
+
+        public Song(string SongName, string SetName, string SetDescription, string username, string password, string song_notes)
         {
             InitializeComponent();
-            NavigationPage navigationPage = new NavigationPage(new SongPage());
+
+         
+                NavigationPage navigationPage = new NavigationPage(new SongPage(SongName, SetName, SetDescription, username, password, song_notes));
             //navigationPage.IconImageSource = "Guitar.png";
 
-            Children.Add(new SongPage());
-            Children.Add(navigationPage);
+            NavigationPage navigationPage2 = new NavigationPage(new SongPage(SongName, SetName, SetDescription, username, password, song_notes));
+            NavigationPage navigationPage3 = new NavigationPage(new SongPage(SongName, SetName, SetDescription, username, password, song_notes));
+            NavigationPage navigationPage4 = new NavigationPage(new SongPage(SongName, SetName, SetDescription, username, password, song_notes));
+            NavigationPage navigationPage5 = new NavigationPage(new SongPage(SongName, SetName, SetDescription, username, password, song_notes));
+
+            navigationPage.Title = "Piano";
+            this.Children.Add(navigationPage);
+            navigationPage2.Title = "Guitar";
+            this.Children.Add(navigationPage2);
+            navigationPage3.Title = "Drums";
+            this.Children.Add(navigationPage3);
+            navigationPage4.Title = "Bass";
+            this.Children.Add(navigationPage4);
+            navigationPage5.Title = "Vocals";
+            this.Children.Add(navigationPage5);
+
+
 
 
         }

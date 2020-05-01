@@ -4,8 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="StageCrew.Views.SongPage"
-             Title="My Song">
+             x:Class="StageCrew.Views.SongPage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -20,11 +19,11 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <BoxView Color="DeepSkyBlue" Grid.Row="0" Grid.Column="0"/>
-                    <Entry x:Name="SongNameEntry" Grid.Row="0" Grid.Column="0" TextColor="White" Text="Song Page" FontSize="36" FontAttributes="Bold"
+                    <Entry x:Name="SongNameEntry" Grid.Row="0" Grid.Column="0" TextColor="White" FontSize="36" FontAttributes="Bold"
                 HorizontalOptions="Center" />
 
                     <Label Text="Song Info:" Grid.Row="1" Grid.Column="0" FontSize="26" FontAttributes="Bold" TextDecorations="Underline"/>
-                    
+
                     <ScrollView BackgroundColor="Azure" Grid.Row="2" Grid.Column="0" Margin="5">
                         <StackLayout x:Name="StanzaStack" Margin="15">
 
@@ -45,8 +44,8 @@
                     <Button Text="Add Stanza" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Margin="25" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" FontSize="Small" Clicked="Add_Stanza_Button_Clicked"/>
 
                 </Grid>
-                
-               
+
+
 
                 <StackLayout VerticalOptions="EndAndExpand">
                     <Label x:Name="Notes" Text="Notes:" HorizontalOptions="Start" FontSize="26" FontAttributes="Bold" TextDecorations="Underline"/>

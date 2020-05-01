@@ -4,8 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="StageCrew.Views.Stanza"
-             Title="Stanza">
+             x:Class="StageCrew.Views.Stanza">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -21,7 +20,7 @@
              
                 HorizontalOptions="CenterAndExpand" TextColor="White"/>
                 </Grid>
-                
+
 
                 <Button x:Name="SaveStanzaButton" Text="Save" HorizontalOptions="Center" Margin="25" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" FontSize="Small" Clicked="SaveStanzaButton_Clicked"/>
 
@@ -59,13 +58,14 @@
                 </AbsoluteLayout>
                 <Editor x:Name="line4_entry" Placeholder="Line 4..." 
                     AutoSize="TextChanges" Margin="5" />
-               
+
                 <Button Text="Add Recording" HorizontalOptions="Center" VerticalOptions="Center" Margin="25" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" FontSize="Small" Clicked="Add_Recording_Button_Clicked" />
                 <StackLayout VerticalOptions="EndAndExpand">
                     <Label x:Name="Notes" Text="Notes:" HorizontalOptions="Start" FontSize="26" FontAttributes="Bold" TextDecorations="Underline"/>
                     <Editor x:Name="NotesEditor" Placeholder="type notes here..." FontSize="Medium" />
                 </StackLayout>
             </StackLayout>
+            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

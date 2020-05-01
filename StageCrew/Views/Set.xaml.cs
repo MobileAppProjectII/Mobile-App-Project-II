@@ -94,7 +94,7 @@ namespace StageCrew.Views
         protected void button_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-             Navigation.PushAsync(new Song(button.Text, this.SetName, this.SetDescription, this.verified_username, this.verified_password));
+             Navigation.PushAsync(new Song(button.Text, this.SetName, this.SetDescription, this.verified_username, this.verified_password, "empty"));
             // identify which button was clicked and perform necessary actions
         }
 
@@ -168,8 +168,33 @@ namespace StageCrew.Views
             //else
             //{
             //    DisplayAlert("Login", "Login not correct, empty username or password.", "Ok.");
-            //}
+            //}  string old_set_name = this.SetName;
 
+            string old_set_name = this.SetName;
+
+            SetDescription = setDescriptionEditor.Text;
+            this.SetName = SetNameLabel.Text;
+            string username_share = Entry_Share_Username.Text;
+            SetInfo newSet = new SetInfo(this.SetName, SetDescription, username_share, this.verified_password);
+            using (SQLiteConnection conn = new SQLiteConnection(_dbPath))
+            {
+                conn.CreateTable<SetInfo>(); //creates table to read from it?
+                var data = conn.Table<SetInfo>().ToList(); //everything is in contacts at this point
+
+                foreach (SetInfo s in data)
+                {
+                    if (s.SetName == "New Set" || s.SetName == newSet.SetName || s.SetName == old_set_name)
+                        App.UserDatabase.DeleteSet(s.id);
+
+                }
+
+                App.UserDatabase.SaveSet(newSet);
+
+
+                Navigation.PopAsync();
+                Navigation.PushAsync(new HomeScreen(this.verified_username, this.verified_password)); // open another one to load in data from db
+
+            }
         }
     }
 }

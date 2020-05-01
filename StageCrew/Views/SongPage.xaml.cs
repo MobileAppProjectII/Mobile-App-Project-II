@@ -70,7 +70,7 @@ namespace StageCrew.Views
 
         private void Init()
         {
-            SongNameEntry.Text = this.SongName;
+            SongNameEntry.Text = SongName;
             NotesEditor.Text = song_notes;
             using (SQLiteConnection conn = new SQLiteConnection(_dbPath))
             {
@@ -131,7 +131,7 @@ namespace StageCrew.Views
 
                 foreach (SongInfo s in data)
                 {
-                    if (s.SongName == "New Song" || s.SongName == song.SongName || s.SongName == old_song_name)
+                    if (s.SongName == "New Song" || s.SongName == old_song_name || song.SongName == s.SongName)
                     {
                         App.UserDatabase.DeleteSong(s.id);
                     }

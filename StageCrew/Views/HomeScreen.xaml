@@ -21,15 +21,11 @@
                     <BoxView Color="DeepSkyBlue" Grid.Row="0" Grid.Column="0"/>
                     <Label x:Name="AccountNameLabel" Text="Account Name:" FontSize="36" TextColor="White" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
                 </Grid>
-            
-            
-            
-            
-            <Image x:Name="profileImg" Source="download.jpg" HeightRequest="200"/>
-            
-            
-            
-            <Button Text="Edit Profile" Clicked="EditProfileButtonClicked" WidthRequest="150" Margin="25" BackgroundColor="BlueViolet" TextColor="White" HorizontalOptions="Center" FontSize="Small"/>
+
+
+                <Image x:Name="profileImg" Source="download.jpg" HeightRequest="200"/>
+
+                <Button Text="Edit Profile" Clicked="EditProfileButtonClicked" WidthRequest="150" Margin="25" BackgroundColor="BlueViolet" TextColor="White" HorizontalOptions="Center" FontSize="Small"/>
             <StackLayout x:Name="AccountStuff" Margin="15">
                 <Label Text="Location:" FontAttributes="Bold" TextDecorations="Underline" FontSize="26" Margin="5"/>
                 <Label x:Name="location_info"  FontSize="Medium" Margin="5"/>
