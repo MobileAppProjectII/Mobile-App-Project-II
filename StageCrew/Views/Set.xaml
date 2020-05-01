@@ -56,7 +56,7 @@
 
                 <StackLayout Margin="10">
                     <Label x:Name="Lbl_Username" Text="Share With..." TextDecorations="Underline" FontSize="26" FontAttributes="Bold"/>
-                    <Entry x:Name="Entry_Username" Placeholder="Type username..." FontSize="Medium"/>
+                    <Entry x:Name="Entry_Share_Username" Placeholder="Type username..." FontSize="Medium"/>
                     <Button x:Name="Btn_Share" Text="Share" Margin="25" BackgroundColor="BlueViolet" TextColor="White" WidthRequest="150" HorizontalOptions="Center" FontSize="Small" Clicked="ShareProcedure"/>
                 </StackLayout>
             </StackLayout>
